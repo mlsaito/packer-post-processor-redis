@@ -1,0 +1,20 @@
+package: packer-post-processor-redis
+import:
+- package: github.com/garyburd/redigo
+  version: v1.6.0
+  subpackages:
+  - redis
+- package: github.com/hashicorp/packer
+  version: v1.3.5
+  subpackages:
+  - common
+  - helper/config
+  - packer
+  - packer/plugin
+  - template/interpolate
+- package: github.com/motymichaely/packer-post-processor-redis
+  subpackages:
+  - redis
+testImport:
+- package: github.com/rafaeljusto/redigomock
+  version: v2.2
